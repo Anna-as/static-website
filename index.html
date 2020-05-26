@@ -7,7 +7,43 @@
     <link rel="shortcut icon" href="https://tse2.mm.bing.net/th?id=OIP.YOy9QnSp0kk6Jl7fWTbYnQHaHZ&pid=Api&P=0&w=300&h=300" type="image/x-icon" /> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
+    <style>
+        .flip-card {
+        background-color: transparent;
+        width: 322px;
+        height: 322px;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+        padding: 10px;
+        }
+        .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; 
+        backface-visibility: hidden;
+        }
+        .flip-card-front {
+        background-color: #bbb;
+        color: black;
+        }
+        .flip-card-back {
+        background-color: lightcoral;
+        color: white;
+        transform: rotateY(180deg);
+        align-content: center;
+        }
+    </style>
 </head>
 <body style="background-image:url('https://tse1.mm.bing.net/th?id=OIP.kKE_Gr-xJmFbgvZ37mGDzAHaEK&pid=Api&P=0&w=288&h=163');
 background-size:cover;">
@@ -29,11 +65,14 @@ background-size:cover;">
                       <a class="nav-link text-white font-weight-bolder" href="#Home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
+                      <a class="nav-link text-white font-weight-bolder" href="#About Me">About Me</a>
+                    </li>
+                    <li class="nav-item">
                       <a class="nav-link text-white font-weight-bolder" href="#Skills">Skills</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white font-weight-bolder" href="#Contact">Contact Me</a>
-                      </li>
+                     </li>
         
                   </ul>
                   
@@ -61,7 +100,45 @@ background-size:cover;">
         </div>
     </div>
 </section>
-<section id="Skills" style="padding-top: 6em;padding-bottom: 4em;">
+<section id="About Me" style="padding-top: 4em;padding-bottom: 4em;">
+    <div class="container p-4 text-white">
+        <h1 class="text-center pb-4"> About Me</h1>
+        <p>I am Anna Shaju from Kerala,India...<br><br>I am currently doing my B.Tech in Electronics And Communication in School
+         Of Engineering,CUSAT</p>
+        <h2 class="text-center pb-4 text-center">Education</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="flip-card mx-auto">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPnoP_T-hjl32u8CvnW3Il1WHyQ65E83u0dOagWnxBUpgnWCu6&usqp=CAU" 
+                        alt="image unavailable" style="width:300px;height:300px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>School</h1>
+                        <p>St Vincent Pallotti Central School</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.PpjDhVb5az1nPpwh8tyiEAHaFU&pid=Api&P=0&w=218&h=158" 
+                        alt="image unavailable" style="width:300px;height:300px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Degree</h1>
+                        <p>School Of Engineering,CUSAT</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="Skills" style="padding-top: 4em;padding-bottom: 4em;">
     <div class="container p-4 text-white">
         <h1 class="text-center">Skills</h1>
         <div class="row">
